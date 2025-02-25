@@ -1,16 +1,194 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.weather.Controller">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="250.0" style="-fx-background-color: #008080; -fx-border-color: orange;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weather.Controller">
+   <children>
+      <AnchorPane layoutX="2.0" prefHeight="66.0" prefWidth="230.0" style="-fx-background-color: #006400;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="54.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ПОГОДНИК" AnchorPane.bottomAnchor="17.376562500000006" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="54.225781249999955" AnchorPane.topAnchor="17.1015625">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5151515007019043" radius="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7099999785423279" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="0.8833333253860474" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+            </Text>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="city" alignment="CENTER" layoutX="34.0" layoutY="82.0" promptText="ВВЕДИТЕ ГОРОД" style="-fx-background-color: #008080; -fx-border-color: #800000; -fx-border-radius: 5;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Text layoutX="32.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ИНФОРМАЦИЯ">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.046315789222717285" blue="0.6947368383407593" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+      <Text fx:id="temp_info" layoutX="18.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ТЕМПЕРАТУРА:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="205.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5151515007019043" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.38947367668151855" green="0.0028849903028458357" blue="0.0028849903028458357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text fx:id="temp_feels" layoutX="13.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ОЩУЩАЕТСЯ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="235.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5151515007019043" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6000000238418579" green="0.03777777776122093" blue="0.03777777776122093" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text fx:id="temp_max" layoutX="14.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="МАКСИМУМ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="265.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5151515007019043" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.38947367668151855" green="0.0028849903028458357" blue="0.0028849903028458357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text fx:id="temp_min" layoutX="14.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="МИНИМУМ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="295.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5151515007019043" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.6000000238418579" green="0.03777777776122093" blue="0.03777777776122093" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Text fx:id="pressure" layoutX="14.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДАВЛЕНИЕ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="325.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5151515007019043" radius="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9263157844543457" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.38947367668151855" green="0.0028849903028458357" blue="0.0028849903028458357" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Text>
+      <Button fx:id="getData" contentDisplay="CENTER" layoutX="69.0" layoutY="128.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="118.0" style="-fx-background-color: #2F4F4F;" text="УЗНАТЬ ПОГОДУ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.5333333611488342" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9052631855010986" green="0.06035087630152702" blue="0.6377075910568237" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>
