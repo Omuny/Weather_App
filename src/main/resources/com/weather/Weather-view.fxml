@@ -64,7 +64,7 @@
             </LinearGradient>
          </fill>
       </Text>
-      <Text fx:id="temp_info" layoutX="18.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ТЕМПЕРАТУРА:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="205.0">
+      <Text fx:id="tempInfo" layoutX="18.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Температура:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="205.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -85,7 +85,7 @@
             </RadialGradient>
          </fill>
       </Text>
-      <Text fx:id="temp_feels" layoutX="13.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ОЩУЩАЕТСЯ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="235.0">
+      <Text fx:id="tempFeels" layoutX="13.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ощущается:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="235.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -106,7 +106,7 @@
             </RadialGradient>
          </fill>
       </Text>
-      <Text fx:id="temp_max" layoutX="14.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="МАКСИМУМ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="265.0">
+      <Text fx:id="tempMax" layoutX="14.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Максимум:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="265.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -127,7 +127,7 @@
             </RadialGradient>
          </fill>
       </Text>
-      <Text fx:id="temp_min" layoutX="14.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="МИНИМУМ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="295.0">
+      <Text fx:id="tempMin" layoutX="14.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Минимум:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="295.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -148,7 +148,7 @@
             </RadialGradient>
          </fill>
       </Text>
-      <Text fx:id="pressure" layoutX="14.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ДАВЛЕНИЕ:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="325.0">
+      <Text fx:id="pressure" layoutX="14.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Давление:" AnchorPane.leftAnchor="15.200000000000001" AnchorPane.topAnchor="325.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

@@ -11,11 +11,6 @@ import java.io.InputStreamReader;
 import java.net.URLConnection;
 import org.json.JSONObject;
 
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
-
-
-
 public class Controller {
 
     @FXML
@@ -35,16 +30,16 @@ public class Controller {
     private Text pressure;
 
     @FXML
-    private Text temp_feels;
+    private Text tempFeels;
 
     @FXML
-    private Text temp_info;
+    private Text tempInfo;
 
     @FXML
-    private Text temp_max;
+    private Text tempMax;
 
     @FXML
-    private Text temp_min;
+    private Text tempMin;
 
     @FXML
     void initialize() {
@@ -59,10 +54,10 @@ public class Controller {
                 if (!output.isEmpty()) { // Нет ошибки и такой город есть
                     JSONObject obj = new JSONObject(output);
                     // Обрабатываем JSON и устанавливаем данные в текстовые надписи
-                    temp_info.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
-                    temp_feels.setText("Ощущается: " + obj.getJSONObject("main").getDouble("feels_like"));
-                    temp_max.setText("Максимум: " + obj.getJSONObject("main").getDouble("temp_max"));
-                    temp_min.setText("Минимум: " + obj.getJSONObject("main").getDouble("temp_min"));
+                    tempInfo.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
+                    tempFeels.setText("Ощущается: " + obj.getJSONObject("main").getDouble("feels_like"));
+                    tempMax.setText("Максимум: " + obj.getJSONObject("main").getDouble("temp_max"));
+                    tempMin.setText("Минимум: " + obj.getJSONObject("main").getDouble("temp_min"));
                     pressure.setText("Давление: " + obj.getJSONObject("main").getDouble("pressure"));
                 }
             }
@@ -71,7 +66,7 @@ public class Controller {
 
     // Обработка URL адреса и получение данных с него
     private static String getUrlContent(String urlAdress) {
-        StringBuffer content = new StringBuffer();
+        StringBuilder content = new StringBuilder();
 
         try {
             URL url = new URL(urlAdress);
