@@ -44,7 +44,9 @@ public class Controller {
     @FXML
     void initialize() {
         getData.setOnAction(event -> {
-            System.out.println("Работает");
+            String getUserCity = city.getText().trim();
+            String output = getUrlContent("http://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=ffff37ddc387c7e6e96fd34c900787bc&units=metric");
+            System.out.println(output);
         });
     }
 
