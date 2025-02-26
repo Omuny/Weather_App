@@ -8,6 +8,9 @@ import java.util.ResourceBundle;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.URLConnection;
 
 public class Controller {
 
@@ -40,14 +43,30 @@ public class Controller {
 
     @FXML
     void initialize() {
-        assert city != null : "fx:id=\"city\" was not injected: check your FXML file 'Weather-view.fxml'.";
-        assert getData != null : "fx:id=\"getData\" was not injected: check your FXML file 'Weather-view.fxml'.";
-        assert pressure != null : "fx:id=\"pressure\" was not injected: check your FXML file 'Weather-view.fxml'.";
-        assert temp_feels != null : "fx:id=\"temp_feels\" was not injected: check your FXML file 'Weather-view.fxml'.";
-        assert temp_info != null : "fx:id=\"temp_info\" was not injected: check your FXML file 'Weather-view.fxml'.";
-        assert temp_max != null : "fx:id=\"temp_max\" was not injected: check your FXML file 'Weather-view.fxml'.";
-        assert temp_min != null : "fx:id=\"temp_min\" was not injected: check your FXML file 'Weather-view.fxml'.";
+        getData.setOnAction(event -> {
+            System.out.println("Работает");
+        });
+    }
 
+    // Обработка URL адреса и получение данных с него
+    private static String getUrlContent(String urlAdress) {
+        StringBuffer content = new StringBuffer();
+
+        try {
+            URL url = new URL(urlAdress);
+            URLConnection urlConn = url.openConnection();
+
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConn.getInputStream()));
+            String line;
+
+            while((line = bufferedReader.readLine()) != null) {
+                content.append(line + "\n");
+            }
+            bufferedReader.close();
+        } catch(Exception e) {
+            System.out.println("Такой город был не найден!");
+        }
+        return content.toString();
     }
 
 }
